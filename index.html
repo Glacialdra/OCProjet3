@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les vélos libres de Rouen</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    <script async src="js/slider.js"></script>
+    <script async src="js/map.js"></script>
+    <script async src="js/canvas.js"></script>
+    <script async src="js/reservation.js"></script>
+</head>
+
+<body>
+    <div class="topsection">
+        <p class="toptext">Les vélos libres de Rouen</p>
+    </div>
+    <div class="main">
+        <i class=" prev fas fa-angle-left"></i>
+        <img class="slider" src="img/10.jpg" alt="diaporama">
+        <i class="next fas fa-angle-right"></i>
+    </div>
+    <div class="lowsection">
+        <div id="mapid"></div>
+        <div id="infos-station">
+            <table class="tableau">
+                <thead>
+                    <tr id=selection-station>
+                        <th colspan="2" class="header-station">Sélectionnez une station</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="station-titre">Nom :</td>
+                        <td id="station-nom"></td>
+                    </tr>
+                    <tr>
+                        <td class="station-titre">Adresse :</td>
+                        <td id="station-adresse"></td>
+                    </tr>
+                    <tr>
+                        <td class="station-titre">Statut :</td>
+                        <td id="station-statut"></td>
+                    </tr>
+                    <tr>
+                        <td class="station-titre">Vélos disponibles :</td>
+                        <td id="station-dispo"></td>
+                    </tr>
+                    <tr>
+                        <td class="station-titre">Places disponibles :</td>
+                        <td id="stands-dispo"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="userInfos">
+                <div id="reserver">
+                </div>
+                <div id="canvasContainer">
+                    <canvas id="my-canvas"></canvas>
+                    <canvas id="blank"></canvas>
+                    <button id="effacerCanvas">Effacer signature</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="reservationDisplay">
+        <p id="reservationText">Aucune réservation en cours pour l'instant.</p>
+    </div>
+
+   
+
+
+</body>
+
+</html>
