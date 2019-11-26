@@ -50,7 +50,7 @@ class Reservation {
         }
     };
     elapsedTime(value) {
-        this.secondsLeft = (10 - (Date.now() - value) / 1000);
+        this.secondsLeft = (1200 - (Date.now() - value) / 1000);
         this.minutes = Math.floor(this.secondsLeft / 60);
         this.seconds = Math.floor(this.secondsLeft % 60);
         this.nameDisplay = sessionStorage.getItem('stationName');
